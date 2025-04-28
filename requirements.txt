@@ -1,0 +1,8 @@
+python-dotenv
+tqdm
+cyclonedx-bom
+pip-audit
+pre-commit
+black
+flake8
+questionary
