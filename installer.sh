@@ -16,6 +16,7 @@ fi
 cyclonedx-py -o sbom.json
 pip-audit || echo "pip audit completed with warnings."
 python3 -c 'import platform, json, pkg_resources; json.dump({"python_version": platform.python_version(),"platform": platform.platform(),"installed_packages":{d.project_name:d.version for d in pkg_resources.working_set}}, open("build-metadata.json", "w"), indent=4)'
+python3 scripts/gen_aibom.py
 pre-commit install
 
 echo "Setup complete."
